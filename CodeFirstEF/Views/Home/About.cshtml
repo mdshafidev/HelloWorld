@@ -1,0 +1,15 @@
+﻿@model CodeFirstEF.Models.Employee
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+@using (Html.BeginForm(FormMethod.Get))
+{
+    @Html.TextBoxFor(m=>m.EName)
+    <input type="submit" value="Save" formaction="/Default/Save" />
+    <input type="submit" value="Cancel" formaction="/Default/Cancel" />
+
+}
